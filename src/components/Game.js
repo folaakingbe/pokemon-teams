@@ -1,7 +1,7 @@
 import React from "react";
 
-const Game = () => (
-    <div>
+const Game = (props) => (
+    <div style={props.style}>
         <h1>Pokemon Game</h1>
         <h2>Name</h2>
         <h2>ID</h2>
