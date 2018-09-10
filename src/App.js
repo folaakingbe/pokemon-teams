@@ -19,11 +19,13 @@ import Game from './components/Game';
 //   }
 // }
 
+var color = ["red", "blue"]
+
 class App extends Component {
   render () {
     return <Fragment>
-      <Game style={{backgroundColor: "red"}}/>
-      <Game style={{backgroundColor: "blue"}}/>
+      <Game style={{backgroundColor: color[0]}}/>
+      <Game style={{backgroundColor: color[1]}}/>
     </Fragment>
   }
 }
