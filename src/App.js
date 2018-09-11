@@ -19,13 +19,30 @@ import Game from './components/Game';
 //   }
 // }
 
-var color = ["red", "blue"]
+var color = ["red", "blue"];
+var name = ["Ruby", "Colosseum"];
+var trainer = ["Brendan", "Wes"]
+var ID = [65530, 17041];
+var teams = {};
+teams[0] = ["Blaziken", "Mightyena", "Groudon", "Regice", "Magneton", "Wailord"];
+teams[1] = ["Espeon", "Hariyama", "Jumpluff", "Entei", "Suicune", "Raikou", "Umbreon"];
+console.log(teams[0]);
+
+var games = [];
+for (let i=0; i < color.length; i++) {
+  games.push(<Game name={name[i]} 
+                    ID={ID[i]}
+                    trainer={trainer[i]} 
+                    team={teams[i]}
+                    style={{backgroundColor: color[i]}}/>);
+}
 
 class App extends Component {
   render () {
     return <Fragment>
-      <Game style={{backgroundColor: color[0]}}/>
-      <Game style={{backgroundColor: color[1]}}/>
+      {games}
+      {/* <Game style={{backgroundColor: color[0]}}/>
+      <Game style={{backgroundColor: color[1]}}/> */}
     </Fragment>
   }
 }

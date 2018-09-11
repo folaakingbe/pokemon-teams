@@ -2,10 +2,10 @@ import React from "react";
 
 const Game = (props) => (
     <div style={props.style}>
-        <h1>Pokemon Game</h1>
-        <h2>Name</h2>
-        <h2>ID</h2>
-        <h2>Team</h2>
+        <h1>{props.name}</h1>
+        <h2>{props.trainer}</h2>
+        <h2>{props.ID}</h2>
+        <h2>{props.team}</h2>
     </div>
 );
 
