@@ -27,9 +27,13 @@ var teams = {};
 teams[0] = ["Blaziken", "Mightyena", "Groudon", "Regice", "Magneton", "Wailord"];
 teams[1] = ["Espeon", "Hariyama", "Jumpluff", "Entei", "Suicune", "Raikou", "Umbreon"];
 console.log(teams[0]);
+var extraMember = [];
 
 var games = [];
 for (let i=0; i < color.length; i++) {
+  if (teams[i].length > 6) {
+    extraMember[i] = true;
+  };
   games.push(<Game name={name[i]} 
                     ID={ID[i]}
                     trainer={trainer[i]} 
