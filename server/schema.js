@@ -55,6 +55,13 @@ const RootQuery = new GraphQLObjectType({
                     }
                 }
             }
+        },
+        // Getting all objects. Don't need args for this
+        games: {
+            type: new GraphQLList(GameType),
+            resolve(parentValue, args){
+                return games;
+            }
         }
     }
     
