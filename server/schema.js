@@ -13,18 +13,18 @@ const blaziken = {name: 'Blaziken', nickname: 'Ken', gender: 'male', type1: 'Fir
 const groudon = {name: 'Groudon', nickname: 'Behemoth', gender: 'genderless', type1: 'Ground', type2: null, nature: 'Bold', pokeball: 'Ultra Ball'};
 const regice = {name: 'Regice', nickname: 'Sub-Zero', gender: 'genderless', type1: 'Ice', type2: null, nature: 'Jolly', pokeball: 'Ultra Ball'};
 const mightyena = {name: 'Mightyena', nickname: 'Scavenger', gender: 'male', type1: 'Dark', type2: null, nature: 'Adamant', pokeball: 'Poke Ball'};
-// const magneton = {name: , nickname: , gender: , type1: , type2: , nature: , pokeball: };
-// const = {name: , nickname: , gender: , type1: , type2: , nature: , pokeball: };
+const magneton = {name: 'Magneton', nickname: 'Circuit', gender: 'genderless', type1: 'Electric', type2: 'Steel', nature: 'Quiet', pokeball: 'Nest Ball'};
+const wailord = {name: 'Wailord', nickname: 'Colossus', gender: 'female', type1: 'Water', type2: null, nature: 'Lonely', pokeball: 'Ultra Ball'};
 const espeon = {name: 'Espeon', nickname: 'Apollo', gender: 'male', type1: 'Psychic', type2: null, nature: 'Lonely', pokeball: 'Poke Ball'};
 const jumpluff = {name: 'Jumpluff', nickname: 'Lionel', gender: 'male', type1: 'Grass', type2: 'Flying', nature: 'Mild', pokeball: 'Great Ball'};
 const hariyama = {name: 'Hariyama', nickname: 'Tohru', gender: 'male', type1: 'Fighting', type2: null, nature: 'Modest', pokeball: 'Poke Ball'};
-// const = {name: , nickname: , gender: , type1: , type2: , nature: , pokeball: };
-// const = {name: , nickname: , gender: , type1: , type2: , nature: , pokeball: };
-// const = {name: , nickname: , gender: , type1: , type2: , nature: , pokeball: };
-// const = {name: , nickname: , gender: , type1: , type2: , nature: , pokeball: };
+const entei = {name: 'Entei', nickname: 'Phyre', gender: 'genderless', type1: 'Fire', type2: null, nature: 'Impish', pokeball: 'Ultra Ball'};
+const suicune = {name: 'Suicune', nickname: 'Suijin', gender: 'genderless', type1: 'Water', type2: null, nature: 'Rash', pokeball: 'Net Ball'};
+const raikou = {name: 'Raikou', nickname: 'Thor', gender: 'genderless', type1: 'Electric', type2: null, nature: 'Impish', pokeball: 'Ultra Ball'};
+const umbreon = {name: 'Umbreon', nickname: 'Artemis', gender: 'male', type1: 'Dark', type2: null, nature: 'Hasty', pokeball: 'Poke Ball'};
 
-const team1 = [blaziken, groudon, regice, mightyena];
-const team2 = [espeon, jumpluff, hariyama];
+const team1 = [blaziken, groudon, regice, mightyena, magneton, wailord];
+const team2 = [espeon, jumpluff, hariyama, entei, suicune, raikou, umbreon];
 
 const games = [
     {id:'1', title:'Ruby', name:'Brendan', number:65530, team:team1},
