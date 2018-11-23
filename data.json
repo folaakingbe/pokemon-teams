@@ -1,0 +1,137 @@
+{
+    "games": [
+        {
+          "id": "1",
+          "title": "Ruby",
+          "name": "Brendan",
+          "number": 65530,
+          "team": [
+            {
+              "name": "Blaziken",
+              "nickname": "Ken",
+              "gender": "male",
+              "type1": "Fire",
+              "type2": "Fighting",
+              "nature": "Docile",
+              "pokeball": "Poke Ball"
+            },
+            {
+              "name": "Groudon",
+              "nickname": "Behemoth",
+              "gender": "genderless",
+              "type1": "Ground",
+              "type2": null,
+              "nature": "Bold",
+              "pokeball": "Ultra Ball"
+            },
+            {
+              "name": "Regice",
+              "nickname": "Sub-Zero",
+              "gender": "genderless",
+              "type1": "Ice",
+              "type2": null,
+              "nature": "Jolly",
+              "pokeball": "Ultra Ball"
+            },
+            {
+              "name": "Mightyena",
+              "nickname": "Scavenger",
+              "gender": "male",
+              "type1": "Dark",
+              "type2": null,
+              "nature": "Adamant",
+              "pokeball": "Poke Ball"
+            },
+            {
+              "name": "Magneton",
+              "nickname": "Circuit",
+              "gender": "genderless",
+              "type1": "Electric",
+              "type2": "Steel",
+              "nature": "Quiet",
+              "pokeball": "Nest Ball"
+            },
+            {
+              "name": "Wailord",
+              "nickname": "Colossus",
+              "gender": "female",
+              "type1": "Water",
+              "type2": null,
+              "nature": "Lonely",
+              "pokeball": "Ultra Ball"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "title": "Colosseum",
+          "name": "Wes",
+          "number": 17041,
+          "team": [
+            {
+              "name": "Espeon",
+              "nickname": "Apollo",
+              "gender": "male",
+              "type1": "Psychic",
+              "type2": null,
+              "nature": "Lonely",
+              "pokeball": "Poke Ball"
+            },
+            {
+              "name": "Jumpluff",
+              "nickname": "Lionel",
+              "gender": "male",
+              "type1": "Grass",
+              "type2": "Flying",
+              "nature": "Mild",
+              "pokeball": "Great Ball"
+            },
+            {
+              "name": "Hariyama",
+              "nickname": "Tohru",
+              "gender": "male",
+              "type1": "Fighting",
+              "type2": null,
+              "nature": "Modest",
+              "pokeball": "Poke Ball"
+            },
+            {
+              "name": "Entei",
+              "nickname": "Phyre",
+              "gender": "genderless",
+              "type1": "Fire",
+              "type2": null,
+              "nature": "Impish",
+              "pokeball": "Ultra Ball"
+            },
+            {
+              "name": "Suicune",
+              "nickname": "Suijin",
+              "gender": "genderless",
+              "type1": "Water",
+              "type2": null,
+              "nature": "Rash",
+              "pokeball": "Net Ball"
+            },
+            {
+              "name": "Raikou",
+              "nickname": "Thor",
+              "gender": "genderless",
+              "type1": "Electric",
+              "type2": null,
+              "nature": "Impish",
+              "pokeball": "Ultra Ball"
+            },
+            {
+              "name": "Umbreon",
+              "nickname": "Artemis",
+              "gender": "male",
+              "type1": "Dark",
+              "type2": null,
+              "nature": "Hasty",
+              "pokeball": "Poke Ball"
+            }
+          ]
+        }
+    ]
+}

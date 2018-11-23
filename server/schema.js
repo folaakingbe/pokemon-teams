@@ -1,3 +1,4 @@
+const axios = require('axios');
 const {
     GraphQLObjectType,
     GraphQLString,
@@ -9,6 +10,7 @@ const {
 
 // Hardcoded Data
 
+/*
 const blaziken = {name: 'Blaziken', nickname: 'Ken', gender: 'male', type1: 'Fire', type2: 'Fighting', nature: 'Docile', pokeball: 'Poke Ball'}; 
 const groudon = {name: 'Groudon', nickname: 'Behemoth', gender: 'genderless', type1: 'Ground', type2: null, nature: 'Bold', pokeball: 'Ultra Ball'};
 const regice = {name: 'Regice', nickname: 'Sub-Zero', gender: 'genderless', type1: 'Ice', type2: null, nature: 'Jolly', pokeball: 'Ultra Ball'};
@@ -30,6 +32,7 @@ const games = [
     {id:'1', title:'Ruby', name:'Brendan', number:65530, team:team1},
     {id:'2', title:'Colosseum', name:'Wes', number:17041, team:team2}
 ];
+*/
 
 // Pokemon Type
 const PokemonType = new GraphQLObjectType({
@@ -72,6 +75,7 @@ const RootQuery = new GraphQLObjectType({
                         return games[i];
                     }
                 }
+            //    return axios; Figure out how to change port of json server
             }
         },
         // Getting all objects. Don't need args for this
