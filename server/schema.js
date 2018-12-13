@@ -70,19 +70,27 @@ const RootQuery = new GraphQLObjectType({
                 id:{type: GraphQLString}
             },
             resolve(parentValue, args){
+                /*
                 for (let i = 0; i < games.length; i++){
                     if (games[i].id == args.id) {
                         return games[i];
                     }
                 }
-            //    return axios; Figure out how to change port of json server
+                */
+                // Making a request using axios to json server and returning it through graphql
+                // returns a promise
+                // res is a data object so needs to map res to res.data
+                return axios.get('http://localhost:3001/games/' + args.id)
+                    .then(res => res.data); 
             }
         },
         // Getting all objects. Don't need args for this
         games: {
             type: new GraphQLList(GameType),
             resolve(parentValue, args){
-                return games;
+                // return games;
+                return axios.get('http://localhost:3001/games')
+                    .then(res => res.data);
             }
         }
     }
