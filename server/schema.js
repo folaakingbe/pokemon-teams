@@ -95,8 +95,55 @@ const RootQuery = new GraphQLObjectType({
         }
     }
     
-})
+});
+
+// Mutations
+const mutation = new GraphQLObjectType({
+    name: 'Mutation',
+    fields:{
+        addGame:{
+            type: GameType,
+            args:{
+                title: {type: new GraphQLNonNull(GraphQLString)},
+                name: {type: GraphQLString},
+                number: {type: GraphQLInt}
+            },
+            resolve(parentValue, args){
+                return axios.post('http://localhost:3001/games', {
+                    title: args.title,
+                    name: args.name,
+                    number: args.number
+                })
+                .then(res => res.data)
+            }
+        },
+        deleteGame:{
+            type: GameType,
+            args:{
+                id: {type: new GraphQLNonNull(GraphQLString)}
+            },
+            resolve(parentValue, args){
+                return axios.delete('http://localhost:3001/games/'+args.id)
+                .then(res => res.data)
+            }
+        },
+        editGame:{
+            type: GameType,
+            args:{
+                id: {type: new GraphQLNonNull(GraphQLString)},
+                title: {type: GraphQLString},
+                name: {type: GraphQLString},
+                number: {type: GraphQLInt}
+            },
+            resolve(parentValue, args){
+                return axios.patch('http://localhost:3001/games/'+args.id, args)
+                .then(res => res.data)
+            }
+        }
+    }
+});
 
 module.exports = new GraphQLSchema({
-    query:RootQuery
+    query:RootQuery,
+    mutation
 });
