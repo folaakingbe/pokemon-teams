@@ -17,7 +17,7 @@
     "start": "node ./server/server.js",
     "server": "nodemon ./server/server.js",
     "client": "yarn --cwd client start",
-    "dev": "concurrently \"yarn run server\" \"yarn client\"",
+    "dev": "concurrently \"yarn run server\" \"yarn client\" \"yarn run json:server\"",
     "json:server": "json-server --watch data.json --port 3001"
   }
 }
