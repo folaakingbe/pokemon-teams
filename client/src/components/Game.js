@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
+import GameItem from './GameItem';
 
 const GAMES_QUERY = gql`
 query GamesQuery {
@@ -16,7 +17,7 @@ query GamesQuery {
 export class Game extends Component {
     render() {
         return (
-            <div>
+            <Fragment>
                 <h1 className="display-4 my-3">Games</h1>
                 <Query query={GAMES_QUERY}>
                     {
@@ -25,12 +26,18 @@ export class Game extends Component {
                             if (error) console.log(error);
                             console.log(data);
 
-                            return <h1>Test</h1>;
+                            // return <h1>test</h1>
+                            return (
+                                <Fragment>
+                                    {data.games.map(game => (
+                                        <GameItem key={game.id} game={game} />
+                                    ))}
+                                </Fragment>
+                            );
                         }
                     }
                 </Query>
-
-            </div>
+            </Fragment>
         )
     }
 }
