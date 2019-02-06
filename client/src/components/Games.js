@@ -10,11 +10,14 @@ query GamesQuery {
         title
         name
         number
+        team {
+            name
+        }
     }
 }
 `;
 
-export class Game extends Component {
+export class Games extends Component {
     render() {
         return (
             <Fragment>
@@ -25,12 +28,15 @@ export class Game extends Component {
                             if (loading) return <h4>Loading...</h4>
                             if (error) console.log(error);
                             console.log(data);
+                            // console.log(data.games);
+                            // console.log(data.games.id);
+                            
 
                             // return <h1>test</h1>
                             return (
                                 <Fragment>
                                     {data.games.map(game => (
-                                        <GameItem key={game.id} game={game} />
+                                        <GameItem key={game.id} game={game} team={game.team}/>
                                     ))}
                                 </Fragment>
                             );
@@ -42,4 +48,4 @@ export class Game extends Component {
     }
 }
 
-export default Game
+export default Games

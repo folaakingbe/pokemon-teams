@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
-import Game from './components/Game';
+import Games from './components/Games';
 import './App.css';
 
 const client = new ApolloClient({
@@ -14,7 +14,7 @@ class App extends Component {
       <ApolloProvider client={client}>
         <div className="container">
           <h1>Pokemon Teams</h1>
-          <Game />
+          <Games />
         </div>
       </ApolloProvider>
     );
