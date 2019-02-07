@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
+import { BrowserRouter as Router, Route} from 'react-router-dom'
 import Games from './components/Games';
+import Game from './components/Game';
 import './App.css';
 
 const client = new ApolloClient({
@@ -11,11 +13,15 @@ const client = new ApolloClient({
 class App extends Component {
   render() {
     return (
+      // Outer most element
       <ApolloProvider client={client}>
-        <div className="container">
-          <h1>Pokemon Teams</h1>
-          <Games />
-        </div>
+        <Router>
+          <div className="container">
+            <h1>Pokemon Teams</h1>
+            <Route exact path="/" component={Games} />
+            <Route exact path="/game/:title" component={Game} />
+          </div>
+        </Router>
       </ApolloProvider>
     );
   }
