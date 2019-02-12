@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { Link } from 'react-router-dom';
+import Pokemon from './Pokemon'
 
 const GAME_QUERY = gql`
 query GameQuery($id: String!) {
@@ -37,7 +38,34 @@ export class Game extends Component {
 
                         console.log(data);
 
-                        return <h1>Test</h1>;
+                        const {
+                            id,
+                            title,
+                            name,
+                            number,
+                            team
+                        } = data.game;
+
+                        // var team_members = [];
+                        // if (team !== null) {
+                        //     team_members = team.map(members => members.name);
+                        // }
+
+                        if (team != null) {
+                        return (
+                            // <div className="card card-body mb-3" style={{backgroundColor: 'black'}}>
+                            //     <p>{team_members.join(" ")}</p>
+                            // </div>
+                            <Fragment>
+                                {team.map(pokemon => (
+                                    <Pokemon key={pokemon.name} pokemon={pokemon} />
+                                ))}
+                            </Fragment>
+                        );
+                        }
+                        else {
+                            return <h2 style={{color: 'red'}}>No Team Given</h2>;
+                        }
                     }
                 }
                 </Query>
