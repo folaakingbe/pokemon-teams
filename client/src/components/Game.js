@@ -57,14 +57,22 @@ export class Game extends Component {
                             //     <p>{team_members.join(" ")}</p>
                             // </div>
                             <Fragment>
+                                <h1 className="display-4 my-3">{title} Team</h1>
                                 {team.map(pokemon => (
                                     <Pokemon key={pokemon.name} pokemon={pokemon} />
                                 ))}
+                                <Link to={`/`} className="btn btn-secondary">Back</Link>
                             </Fragment>
                         );
                         }
                         else {
-                            return <h2 style={{color: 'red'}}>No Team Given</h2>;
+                            return (
+                            <Fragment>
+                                <h1 className="display-4 my-3">{title} Team</h1>
+                                <h2 style={{color: 'red'}}>No Team Given</h2>
+                                <Link to={`/`} className="btn btn-secondary">Back</Link>
+                            </Fragment>
+                            );
                         }
                     }
                 }

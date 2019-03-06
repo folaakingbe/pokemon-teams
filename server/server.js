@@ -14,7 +14,7 @@ app.use('/graphql', graphqlHTTP({
 }));
 
 // use yarn run dev:server to start graphql
-// go to localhost:4000/graphql in browser
+// go to localhost:5000/graphql in browser
 // use yarn json:server to start json server on port 3001
 const PORT = process.env.PORT || 5000
 
