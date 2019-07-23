@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// A component that shows a preview of each team on the front page
+
 export default function GameItem({game: { id, title, name, number}, team}) {
     console.log(team);
     // Make an array of team members
@@ -20,6 +22,8 @@ export default function GameItem({game: { id, title, name, number}, team}) {
                 </div>
                 <div className="col-md-3">
                     <Link to={{pathname: `/game/${title}`, state: {id: id}}} className="btn btn-secondary">Team Details</Link>
+                    <p/>
+                    <button className="btn btn-danger">Edit</button>
                 </div>
             </div>
         </div>

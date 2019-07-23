@@ -3,6 +3,8 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import GameItem from './GameItem';
 
+// A component that shows a list of all pokemon teams on the front page
+
 const GAMES_QUERY = gql`
 query GamesQuery {
     games{

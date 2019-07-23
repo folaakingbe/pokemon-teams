@@ -56,6 +56,8 @@ const GameType = new GraphQLObjectType({
         title: {type: GraphQLString},
         name: {type: GraphQLString},
         number: {type: GraphQLInt},
+        color1: {type: GraphQLString},
+        color2: {type: GraphQLString},
         team: {type: new GraphQLList(PokemonType)}
     })
 });

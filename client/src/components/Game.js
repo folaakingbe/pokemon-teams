@@ -4,6 +4,8 @@ import { Query } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import Pokemon from './Pokemon'
 
+// A component that shows the details of the pokemon team on a different page
+
 const GAME_QUERY = gql`
 query GameQuery($id: String!) {
     game(id: $id) {

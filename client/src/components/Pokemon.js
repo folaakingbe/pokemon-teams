@@ -1,5 +1,7 @@
 import React from 'react';
 
+// A component that shows the details of each individual pokemon
+
 export default function Pokemon({pokemon: {name, nickname, gender, type1, type2, nature, pokeball}}) {
     console.log(name);
     function nullToBlank(item) {

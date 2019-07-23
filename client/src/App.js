@@ -14,6 +14,7 @@ class App extends Component {
   render() {
     return (
       // Outer most element
+      // : is a param that means "any"
       <ApolloProvider client={client}>
         <Router>
           <div className="container">
